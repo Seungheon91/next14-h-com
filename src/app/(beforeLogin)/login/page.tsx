@@ -1,5 +1,12 @@
-import { redirect } from "next/navigation";
+"use client"
 
-export default function Login() :void {
-  redirect('/i/flow/login')
+import { useRouter } from "next/router";
+import Main from "../_component/Main";
+
+export default function Login(){
+  const router = useRouter()
+  router.replace('/i/flow/login')
+  return (
+    <Main/>
+  )  
 }
